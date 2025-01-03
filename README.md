@@ -10,7 +10,9 @@ The `swiftymocky` CLI (a SwiftPM executable) is installed using [Mint](https://g
 ./Scripts/mocks.sh
 ```
 
-## Note
+## Notes
+
+### Mock.swifttemplate
 
 [SwiftyMocky PR #363](https://github.com/MakeAWishFoundation/SwiftyMocky/pull/363) resolves a Swift characters error in the `Mock.swifttemplate` of SwiftyMocky.
 This has been merged into `master` but not released at time of writing.
@@ -20,3 +22,7 @@ This template is referenced from the `Mockfile`.
 Despite referencing `master` of SwiftyMocky, I _think_ this is still an issue because the template in the CLI is out of date, Base64?
 
 It doesn't seem like SwiftyMocky is actively maintained.
+
+### Swift Testing
+
+Since `MockyAssertion` of SwiftyMocky uses `XCTAssert`, this project adds the `SuiteTrait` `SwiftyMockySwiftTestingAssertion` so it works with Swift Testing.
